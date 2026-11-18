@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  color: #302f2a;
+  background: #f7f6f1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #f7f6f1;
+  background-image: radial-gradient(#d9ddd2 0.65px, transparent 0.65px);
+  background-size: 18px 18px;
+}
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+::selection { background: #d7edaa; color: #25351b; }
+.font-serif { font-family: "DM Serif Display", Georgia, serif; }
+:focus-visible { outline: 2px solid #c77956; outline-offset: 2px; }
+
+.note-card { animation: rise-in 360ms both; }
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
